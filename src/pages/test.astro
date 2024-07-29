@@ -1,9 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import ImgAstro from "../astro.png";
-
-// Forces dynamic invocation for every request when using `output: "hybrid"` in astro config
-export const prerender = false
 ---
 
 <html lang="en">
@@ -12,16 +9,15 @@ export const prerender = false
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Test</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Test</h1>
 
 		<Image src={ImgAstro} alt="" width="300" />
 
 		<ul>
-			<li><a href="/test">test.astro (prerendered)</a></li>
-			<li><a href="/test/">test.astro (prerendered)</a></li>
+			<li><a href="/">index.astro (on-demand)</a></li>
 		</ul>
 	</body>
 </html>
